@@ -9,12 +9,12 @@ var frequency = 50;
 
 function dibujar(tamaño, x, y) {
     document.getElementById("grafico").innerHTML = '<svg width="800" height="600">'
-       
+
         + '<rect x="' + x + '" y="' + y + '" width="' + tamaño + '" height="' + tamaño + '"" stroke="green" stroke-width="4" fill="yellow" />'
         + '</svg>';
 }
 
-function anim(tamaño, x, y,amplitude,frequency) {
+function anim(tamaño, x, y, amplitude, frequency) {
     xv = x;
     yv = y;
     xh = x;
@@ -27,7 +27,7 @@ function anim(tamaño, x, y,amplitude,frequency) {
 
 function show() {
     xv++;
-    yv = ((200/2) + amplitude * Math.cos(yh/frequency));
+    yv = ((200 / 2) + amplitude * Math.cos(yh / frequency));
     xh++;
     yh++;
     document.getElementById("grafico").innerHTML = '<svg width="800" height="600">'
