@@ -8,9 +8,9 @@ var amplitude = 100;
 var frequency = 50;
 
 function dibujar(tamaño, x, y) {
-    document.getElementById("grafico").innerHTML = '<svg width="800" height="600">'
+    document.getElementById("grafico").innerHTML = '<svg width="1800" height="350">'
 
-        + '<rect x="' + x + '" y="' + y + '" width="' + tamaño + '" height="' + tamaño + '"" stroke="green" stroke-width="4" fill="yellow" />'
+        + '<rect x="' + 70 + '" y="' + 200 + '" width="' + tamaño + '" height="' + tamaño + '"" stroke="green" stroke-width="4" fill="yellow" />'
         + '</svg>';
 }
 
@@ -22,15 +22,14 @@ function anim(tamaño, x, y, amplitude, frequency) {
     tam = tamaño;
     a = amplitude;
     f = frequency;
-    myVar = setInterval(show, 60);
+    myVar = setInterval(show, 10);
 }
 
 function show() {
     xv++;
-    yv = ((200 / 2) + amplitude * Math.cos(yh / frequency));
-    xh++;
-    yh++;
-    document.getElementById("grafico").innerHTML = '<svg width="800" height="600">'
+    yv = ((200 / 2) + amplitude * Math.cos(yh++ / frequency));
+
+    document.getElementById("grafico").innerHTML = '<svg width="1800" height="350">'
         + '<rect x="' + xv + '" y="' + yv + '" width="' + tam + '" height="' + tam + '"" stroke="green" stroke-width="4" fill="yellow" />'
         + '</svg>';
 }
