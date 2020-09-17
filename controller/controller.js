@@ -7,18 +7,17 @@ var f = 0;
 var amplitude = 100;
 var frequency = 50;
 
-function dibujar(tamaño, x, y) {
+function dibujar(tamaño) {
     document.getElementById("grafico").innerHTML = '<svg width="1800" height="350">'
 
         + '<rect x="' + 70 + '" y="' + 200 + '" width="' + tamaño + '" height="' + tamaño + '"" stroke="green" stroke-width="4" fill="yellow" />'
         + '</svg>';
 }
 
-function anim(tamaño, x, y, amplitude, frequency) {
-    xv = x;
-    yv = y;
-    xh = x;
-    yh = y;
+function anim(tamaño, amplitude, frequency) {
+    xv = 70;
+    yv = 200;
+    yh = yv;
     tam = tamaño;
     a = amplitude;
     f = frequency;
