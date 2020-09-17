@@ -8,11 +8,33 @@ var amplitude = 100;
 var frequency = 50;
 var tim = 0;
 
-function anim(tamaño, amplitude, frequency,tiempo) {
+function anim(tamanio, amplitude, frequency, tiempo) {
+
+    //Validacion tamanio no vacio
+    if (document.getElementById('tamanio').value.length == 0) {
+        alert('El campo no puede ser vacio.');
+        return false
+    }
+    //Validacion tamanio numerico
+    if (isNaN(parseInt((document.getElementById('tamanio').value)))) {
+        alert('El campo debe ser numerico.');
+        return false
+    }
+    //Validacion tiempo no vacio
+    /* Dejo comentareada la validacion hasta que arreglemos el problema con la variable para el tiempo
+        if (document.getElementById('tiempo').value.length == 0) {
+        alert('El campo tiempo no puede ser vacio.');
+        return false
+    }
+    //Validacion tiempo numerico
+    if (isNaN(parseInt((document.getElementById('tiempo').value)))) {
+        alert('El campo tiempo debe ser numerico.');
+        return false
+    }*/
     xv = 70;
     yv = 200;
     yh = yv;
-    tam = tamaño;
+    tam = tamanio;
     a = amplitude;
     f = frequency;
     tim = tiempo;

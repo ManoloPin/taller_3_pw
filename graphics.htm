@@ -1,22 +1,18 @@
 <html>
+<title>RUTA SINUSOIDAL</title>
 
 <head>
   <link href="style/style.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
-
-  <h1>My first SVG</h1>
+  <h1>RUTA SINUSOIDAL</h1>
   <div id="grafico">
   </div>
-  <input id="tamaño" type="text">
-  <input id="tiempo" type="text">
-  
-  <button id="dibujar" onclick="anim(tamaño.value,tiempo.value)">Dibujar</button>
-
+  <label for="id">*Tama&ntilde;o: </label><input id="tamanio" type="text" value="" required pattern="[0-9]">
+  <label for="id">*Tiempo: </label><input id="tiempo" type="text" value="" required pattern="[0-9]">
+  <button id="dibujar" onclick="anim(tamanio.value,tiempo.value)">Dibujar</button>
   <script type="text/javascript" src="controller/controller.js"></script>
-
 </body>
 
 </html>
